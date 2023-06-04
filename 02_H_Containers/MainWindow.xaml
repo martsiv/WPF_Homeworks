@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_H_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF_Page" Height="700" Width="1000" MinWidth="800" Icon="/Fasticon-Leopard-Iphone-Sites-Folder.256.png">
     <Window.Resources>
-        
+
         <Style x:Key="BorderStyle" TargetType="{x:Type Border}">
             <Setter Property="MinHeight" Value="10"/>
             <Setter Property="MinWidth" Value="10"/>
@@ -17,13 +17,172 @@
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
     </Window.Resources>
-    <StackPanel Orientation="Vertical">
-        <StackPanel Height="30">
-            <Border DockPanel.Dock="Top" Width="Auto" Style="{StaticResource BorderStyle}"/>
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+            <DockPanel Background="Black" Height="40">
+                <Button DockPanel.Dock="Left" Background="DodgerBlue" Width="40" Margin="0" BorderThickness="0" Padding="0">
+                    <Grid Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Menu_white.png"
+                                    Stretch="Fill"/>
+                        </Grid.Background>
+                    </Grid>
+                </Button>
+                <Button  Content="Office 365" DockPanel.Dock="Left" Background="Black" BorderBrush="White" Foreground="White" BorderThickness="0, 0, 1, 0" Padding="10, 0"/>
 
-        </StackPanel>
-        <StackPanel Height="30">
+                <Button DockPanel.Dock="Right" Width="40" Foreground="White" BorderBrush="Black"  BorderThickness="1" Padding="0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/icon-g28ffc90b9_640.png" TileMode="Tile"/>
+                    </Button.Background>
+                </Button>
 
+                <Button DockPanel.Dock="Right" Width="40" Background="Black" BorderBrush="White" Foreground="White" BorderThickness="1, 0, 0, 0" Padding="0">
+                    <Grid Width="20" Height="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/question_mark_white.png"
+                                    Stretch="Fill"/>
+                        </Grid.Background>
+                    </Grid>
+                </Button>
+
+                <Button DockPanel.Dock="Right" Width="40" Background="Black" BorderBrush="White" Foreground="White" BorderThickness="1, 0, 0, 0" Padding="0">
+                    <Grid Width="16" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/setting_white.png"
+                                    Stretch="Fill"/>
+                        </Grid.Background>
+
+                    </Grid>
+                </Button>
+
+                <Button DockPanel.Dock="Right" Width="40" Background="Black" BorderBrush="White" Foreground="White" BorderThickness="1, 0, 0, 0" Padding="0">
+                    <Grid Width="16" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/message_white.png"
+                                    Stretch="Fill"/>
+                        </Grid.Background>
+
+                    </Grid>
+                </Button>
+
+                <Button DockPanel.Dock="Right" Width="40" Background="Black" BorderBrush="White" Foreground="White" BorderThickness="1, 0, 0, 0" Padding="0">
+                    <Grid Width="16" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/skype_white.png"
+                                    Stretch="Fill"/>
+                        </Grid.Background>
+
+                    </Grid>
+                </Button>
+
+                <Button Content="Share point" DockPanel.Dock="Right" Background="Black"  BorderBrush="White" Foreground="White" BorderThickness="0, 0, 0, 0" Padding="5, 0, 0, 0" HorizontalContentAlignment="Left"/>
+
+            </DockPanel>
+            <DockPanel Margin="50, 20, 20, 20"  Height="50" LastChildFill="False" >
+                <Border  DockPanel.Dock="Left" Background="DodgerBlue" Width="50" Height="50" Margin="0">
+                    <TextBlock  Text="SS" FontSize="18" Foreground="White" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <DockPanel DockPanel.Dock="Top" Margin="10, 0, 0, 0">
+                    <Button DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Top" Background="White" BorderThickness="0">
+                        <DockPanel>
+                            <Image Width="10" Height="10" DockPanel.Dock="Left" Source="/share.png"></Image>
+                            <TextBlock Padding="5" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" >Share site</TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <TextBlock FontSize="22" >Sitio de exhibition</TextBlock>
+                </DockPanel>
+                <DockPanel DockPanel.Dock="Bottom" Margin="8, 0, 0, 0" VerticalAlignment="Center" LastChildFill="False">
+                    <Button Content="Home" DockPanel.Dock="Left" FontSize=" 12" Background="White" BorderThickness="0" Padding="2, 0"/>
+                    <Button Content="Documents" DockPanel.Dock="Left" FontSize=" 12" Background="White" BorderThickness="0" Padding="8, 0"/>
+                    <Button Content="Pages" DockPanel.Dock="Left" FontSize=" 12" Background="White" BorderThickness="0" Padding="8, 0"/>
+                    <Button Content="Site Contacts" DockPanel.Dock="Left" FontSize=" 12" Background="White" BorderThickness="0" Padding="8, 0"/>
+                    <Button Content="Edit" DockPanel.Dock="Left" FontSize=" 12" Background="White" Foreground="DodgerBlue" BorderThickness="0" Padding="8, 0"/>
+                    <Border DockPanel.Dock="Right" BorderBrush="Black" BorderThickness="1" Width="160">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="12" Height="12" DockPanel.Dock="Left"  Source="/loupe.png" Margin="4"></Image>
+                            <TextBox Grid.Column="1" FontSize="12" BorderThickness="0">Search</TextBox>
+                        </Grid>
+                    </Border>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel Height="30" Background="LightGray">
+                <Button DockPanel.Dock="Right" Width="70" BorderThickness="0" Background="DodgerBlue">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="10" Height="10" DockPanel.Dock="Left" Source="/pencil-48.png"></Image>
+                        <TextBlock Padding="5" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" Foreground="White" >Edit</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button DockPanel.Dock="Left" Width="80" Margin="40, 0" BorderThickness="0" Background="LightGray">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="10" Height="10" DockPanel.Dock="Left" Source="/plus_Black.png"></Image>
+                        <TextBlock Padding="5" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" >New</TextBlock>
+                        <Image Width="10" Height="10" DockPanel.Dock="Left" Source="/down_Arrow.png"></Image>
+                    </StackPanel>
+                </Button>
+                <TextBlock Padding="15, 7" TextAlignment="Right">Published</TextBlock>
+            </DockPanel>
+            <Grid Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="/img1.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <DockPanel LastChildFill="False" Grid.Column="1" Margin="30, 40, 40, 10">
+                    <Button DockPanel.Dock="Top" Content="Element" Margin="0" Background="DodgerBlue" BorderThickness="0" Foreground="White"  Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock DockPanel.Dock="Top" FontFamily="Arial" Margin="0, 25, 0, 0" FontSize="20" FontWeight="Bold" >Realizar una impresion</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" TextWrapping="WrapWithOverflow" FontSize="12"   >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</TextBlock>
+                    <Border Height="20" DockPanel.Dock="Bottom" BorderBrush="DodgerBlue" BorderThickness="0, 1, 0, 0">
+                        <TextBlock Foreground="DodgerBlue"  TextWrapping="WrapWithOverflow" FontSize="12">Learn about this part</TextBlock>
+                    </Border>
+                </DockPanel>
+            </Grid>
+            <Grid Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1.4*"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel LastChildFill="False" Grid.Column="0" Margin="30, 40, 40, 10">
+                    <Button DockPanel.Dock="Top" Content="Element" Margin="0" Background="DodgerBlue" BorderThickness="0" Foreground="White"  Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock DockPanel.Dock="Top" FontFamily="Arial" Margin="0, 25, 0, 0" FontSize="20" FontWeight="Bold" >Realizar una impresion</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" TextWrapping="WrapWithOverflow" FontSize="12"   >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</TextBlock>
+                    <Border Height="20" DockPanel.Dock="Bottom" BorderBrush="DodgerBlue" BorderThickness="0, 1, 0, 0">
+                        <TextBlock Foreground="DodgerBlue"  TextWrapping="WrapWithOverflow" FontSize="12">Learn about this part</TextBlock>
+                    </Border>
+                </DockPanel>
+                <Image Grid.Column="1" Source="/img2.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="/img3.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <DockPanel LastChildFill="False" Grid.Column="1" Margin="30, 40, 40, 10">
+                    <Button DockPanel.Dock="Top" Content="Element" Margin="0" Background="DodgerBlue" BorderThickness="0" Foreground="White"  Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock DockPanel.Dock="Top" FontFamily="Arial" Margin="0, 25, 0, 0" FontSize="20" FontWeight="Bold" >Realizar una impresion</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" TextWrapping="WrapWithOverflow" FontSize="12"   >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</TextBlock>
+                    <Border Height="20" DockPanel.Dock="Bottom" BorderBrush="DodgerBlue" BorderThickness="0, 1, 0, 0">
+                        <TextBlock Foreground="DodgerBlue"  TextWrapping="WrapWithOverflow" FontSize="12">Learn about this part</TextBlock>
+                    </Border>
+                </DockPanel>
+            </Grid>
+            <TextBlock Height="100" Padding="50" FontSize="16" Foreground="Gray">
+            Image gallery
+            </TextBlock>
+            <UniformGrid VerticalAlignment="Top" Columns="4" Rows="2" Margin="30, 0">
+                <Image Margin="20" Source="/pexels-freemockupsorg-775219.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-jack-sparrow-4045031.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-ksenia-chernaya-3965521.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-leah-kelley-6480707.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-lisa-fotios-1090638.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-pixabay-276514.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-terje-sollie-312029.jpg" Stretch="UniformToFill"></Image>
+                <Image Margin="20" Source="/pexels-vlada-karpovich-4050318.jpg" Stretch="UniformToFill"></Image>
+            </UniformGrid>
         </StackPanel>
-    </StackPanel>
+    </ScrollViewer>
 </Window>

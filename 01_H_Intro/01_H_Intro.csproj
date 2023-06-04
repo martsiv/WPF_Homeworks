@@ -6,6 +6,20 @@
     <RootNamespace>_01_L_Intro</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AssemblyName>Calc</AssemblyName>
+    <ApplicationIcon>calculator-icon_34473.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="calculator-icon_34473.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="calculator-icon_34473.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="calculator-icon_34473.png" />
+  </ItemGroup>
 
 </Project>
