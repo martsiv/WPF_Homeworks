@@ -1,0 +1,60 @@
+﻿<Window x:Class="_03._H_Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03._H_Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800"  MinWidth="450" Icon="/Itzikgur-My-Seven-Travel-Airplane.256.png">
+    <StackPanel VerticalAlignment="Top">
+        <TextBlock Margin="10" FontFamily="Arial" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"> Book hotel number</TextBlock>
+        <UniformGrid Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=fullName}" BorderBrush="AliceBlue" BorderThickness="5">
+                _Full name: 
+            </Label>
+            <TextBox x:Name="fullName" BorderBrush="AliceBlue" BorderThickness="5"/>
+        </UniformGrid>
+        <UniformGrid Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=phoneNumber}" BorderBrush="AliceBlue" BorderThickness="5">
+                _Phone number:
+            </Label>
+            <TextBox x:Name="phoneNumber" BorderBrush="AliceBlue" BorderThickness="5"/>
+        </UniformGrid>
+        <UniformGrid Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=persons}" BorderBrush="AliceBlue" BorderThickness="5">
+                _Persons:
+            </Label>
+            <RepeatButton x:Name="persons" BorderBrush="AliceBlue" Background="White" BorderThickness="5" Click="ClickRepeatBttPersons"/>
+        </UniformGrid>
+        <UniformGrid  Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=Econom}" BorderBrush="AliceBlue" BorderThickness="5">
+                _Room type:
+            </Label>
+            <UniformGrid x:Name="roomTypeGrid" Columns="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <RadioButton Margin="5, 1" x:Name="Econom" BorderBrush="AliceBlue" Background="White" BorderThickness="5">Econom</RadioButton>
+                <RadioButton Margin="5, 1" x:Name="Standart" BorderBrush="AliceBlue" Background="White" BorderThickness="5">Standart</RadioButton>
+                <RadioButton Margin="5, 1" x:Name="Lux" BorderBrush="AliceBlue" Background="White" BorderThickness="5">Lux</RadioButton>
+            </UniformGrid>
+        </UniformGrid>
+        <UniformGrid Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=calendar}" BorderBrush="AliceBlue" BorderThickness="5">
+                _Living time:
+            </Label>
+            <Calendar x:Name="calendar" SelectionMode="MultipleRange"></Calendar>
+        </UniformGrid>
+        <UniformGrid Margin="5" Columns="2">
+            <Button IsEnabled="False" IsDefault="True" x:Name="OK" BorderBrush="AliceBlue" Width="70" Margin="1, 20" Click="ClickOK">
+                OK
+            </Button>
+            <Button IsCancel="True" x:Name="Cancel" BorderBrush="AliceBlue" Width="70" Margin="1, 20" Click="ClickCancel">
+                Cancel
+            </Button>
+        </UniformGrid>
+        <UniformGrid Margin="5" Columns="2">
+            <Label Target="{Binding ElementName=terms}"  HorizontalAlignment="Right" HorizontalContentAlignment="Right">
+                _Accept the terms of use:
+            </Label>
+            <CheckBox x:Name="terms" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckedTerms"/>
+        </UniformGrid>
+    </StackPanel>
+</Window>

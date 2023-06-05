@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_03._1_L_Controls</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Book_Hotel</AssemblyName>
+    <ApplicationIcon>Itzikgur-My-Seven-Travel-Airplane.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Itzikgur-My-Seven-Travel-Airplane.256.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Itzikgur-My-Seven-Travel-Airplane.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Itzikgur-My-Seven-Travel-Airplane.256.png" />
+  </ItemGroup>
+
+</Project>
