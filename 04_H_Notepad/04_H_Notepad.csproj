@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_04_H_Notepad</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AlignCenter.png" />
+    <None Remove="AlignLeft.png" />
+    <None Remove="AlignRight.png" />
+    <None Remove="Bold.png" />
+    <None Remove="Copy.png" />
+    <None Remove="Cut.png" />
+    <None Remove="Italic.png" />
+    <None Remove="Paste.png" />
+    <None Remove="Underline.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AlignCenter.png" />
+    <Resource Include="AlignLeft.png" />
+    <Resource Include="AlignRight.png" />
+    <Resource Include="Bold.png" />
+    <Resource Include="Copy.png" />
+    <Resource Include="Cut.png" />
+    <Resource Include="Italic.png" />
+    <Resource Include="Paste.png" />
+    <Resource Include="Underline.png" />
+  </ItemGroup>
+
+</Project>

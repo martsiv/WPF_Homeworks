@@ -1,0 +1,99 @@
+﻿<Window x:Class="_04_H_Notepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_H_Notepad"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu x:Name="menu" DockPanel.Dock="Top" IsMainMenu="True" Background="AliceBlue">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="OnClickNew"/>
+                <MenuItem Header="Exit" Click="OnClickExit"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Undo" Click="Undo"/>
+                <MenuItem Header="Redo" Click="Redo"/>
+                <Separator/>
+                <MenuItem Header="Select all" Click="SelectedAll"/>
+                <MenuItem Header="Deselect all" Click="DeselectAll"/>
+                <Separator/>
+                <MenuItem Header="Cut" Click="Cut"/>
+                <MenuItem Header="Copy" Click="Copy"/>
+                <MenuItem Header="Paste" Click="Paste"/>
+                <MenuItem Header="Delete" Click="Delete"/>
+                <Separator/>
+                <MenuItem Header="Text color"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem x:Name="theme" Header="Dark\white theme" IsCheckable="True" IsChecked="True" StaysOpenOnClick="True" Click="ThemeClick"/>
+            </MenuItem>
+            <MenuItem Header="Help" Click="HelpClic">
+            </MenuItem>
+        </Menu>
+
+        <ToolBarTray DockPanel.Dock="Top" Background="AliceBlue">
+            
+            <ToolBar>
+                <Button Click="Cut" Height="22">
+                    <Image Source="/Cut.png"/>
+                </Button>
+                <Button Click="Copy" Height="22">
+                    <Image Source="/Copy.png"/>
+                </Button>
+                <Button Click="Paste" Height="22">
+                    <Image Source="/Paste.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Height="22" Click="Italic">
+                    <Image Source="/Italic.png"/>
+                </Button>
+                <Button Height="22" Click="Underline">
+                    <Image Source="/Underline.png"/>
+                </Button>
+                <Button Height="22" Click="Bold">
+                    <Image Source="/Bold.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Click="OnClickAlignLeft" Height="22">
+                    <Image Source="/AlignLeft.png"/>
+                </Button>
+                <Button Click="OnClickAlignCenter" Height="22">
+                    <Image Source="/AlignCenter.png"/>
+                </Button>
+                <Button Click="OnClickAlignRight" Height="22">
+                    <Image Source="/AlignRight.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Size: " VerticalAlignment="Center"/>
+                    <ComboBox x:Name="sizeComboBox" MinWidth="30" SelectionChanged="ChangeSize"/>
+                </StackPanel>
+            </ToolBar>
+            <ToolBar>
+                <TextBlock Text="Color: " VerticalAlignment="Center"/>
+                <xctk:ColorPicker x:Name="colorPicker" Width="50" SelectedColorChanged="ChangeColor" />
+            </ToolBar>
+        </ToolBarTray>
+
+        <StatusBar DockPanel.Dock="Bottom" Background="#FF007ACC">
+            <StatusBarItem HorizontalContentAlignment="Stretch">
+                <DockPanel LastChildFill="False">
+                    <Label x:Name="strings" DockPanel.Dock="Left" Padding="10, 0" Foreground="White">Strings: 0</Label>
+                    <Label x:Name="symbols" DockPanel.Dock="Left" Padding="10, 0" Foreground="White">Symbols: 0</Label>
+                    <Label x:Name="words" DockPanel.Dock="Left" Padding="10, 0" Foreground="White">Words: 0</Label>
+                </DockPanel>
+            </StatusBarItem>
+        </StatusBar>
+
+        <TextBox x:Name="textBox" Margin="5" FontSize="10" AcceptsReturn="True"  HorizontalScrollBarVisibility="Auto"
+                 SelectionChanged="OnSelectionChanged"
+                 VerticalScrollBarVisibility="Auto">
+        </TextBox>
+    </DockPanel>
+</Window>
