@@ -6,6 +6,8 @@
     <RootNamespace>_04_H_Notepad</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AssemblyName>WPF_Notepad</AssemblyName>
+    <ApplicationIcon>Untergunter-Leaf-Mimes-Text-xml.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +20,10 @@
     <None Remove="Italic.png" />
     <None Remove="Paste.png" />
     <None Remove="Underline.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Untergunter-Leaf-Mimes-Text-xml.ico" />
   </ItemGroup>
 
   <ItemGroup>
