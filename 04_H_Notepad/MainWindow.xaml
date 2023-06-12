@@ -9,11 +9,11 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <Menu x:Name="menu" DockPanel.Dock="Top" IsMainMenu="True" Background="AliceBlue">
-            <MenuItem Header="File">
+            <MenuItem Header="_File">
                 <MenuItem Header="New" Click="OnClickNew"/>
                 <MenuItem Header="Exit" Click="OnClickExit"/>
             </MenuItem>
-            <MenuItem Header="Edit">
+            <MenuItem Header="_Edit">
                 <MenuItem Header="Undo" Click="Undo"/>
                 <MenuItem Header="Redo" Click="Redo"/>
                 <Separator/>
@@ -27,15 +27,15 @@
                 <Separator/>
                 <MenuItem Header="Text color"/>
             </MenuItem>
-            <MenuItem Header="View">
+            <MenuItem Header="_View">
                 <MenuItem x:Name="theme" Header="Dark\white theme" IsCheckable="True" IsChecked="True" StaysOpenOnClick="True" Click="ThemeClick"/>
             </MenuItem>
-            <MenuItem Header="Help" Click="HelpClic">
+            <MenuItem Header="_Help" Click="HelpClic">
             </MenuItem>
         </Menu>
 
         <ToolBarTray DockPanel.Dock="Top" Background="AliceBlue">
-            
+
             <ToolBar>
                 <Button Click="Cut" Height="22">
                     <Image Source="/Cut.png"/>
@@ -94,6 +94,20 @@
         <TextBox x:Name="textBox" Margin="5" FontSize="10" AcceptsReturn="True"  HorizontalScrollBarVisibility="Auto"
                  SelectionChanged="OnSelectionChanged"
                  VerticalScrollBarVisibility="Auto">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Undo" Click="Undo"/>
+                    <MenuItem Header="Redo" Click="Redo"/>
+                    <Separator/>
+                    <MenuItem Header="Select all" Click="SelectedAll"/>
+                    <MenuItem Header="Deselect all" Click="DeselectAll"/>
+                    <Separator/>
+                    <MenuItem Header="Cut" Click="Cut"/>
+                    <MenuItem Header="Copy" Click="Copy"/>
+                    <MenuItem Header="Paste" Click="Paste"/>
+                    <MenuItem Header="Delete" Click="Delete"/>
+                </ContextMenu>
+            </TextBox.ContextMenu>
         </TextBox>
     </DockPanel>
 </Window>

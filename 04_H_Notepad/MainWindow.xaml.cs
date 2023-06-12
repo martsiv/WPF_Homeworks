@@ -71,12 +71,12 @@ namespace _04_H_Notepad
         }
         private void UpdateCaretPosition()
         {
-            int str = textBox.GetLineIndexFromCharacterIndex(textBox.CaretIndex);
+            int str = textBox.GetLineIndexFromCharacterIndex(textBox.CaretIndex) + 1;
             int smb = textBox.Text.Length;
-            int wrd = textBox.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count();
+            int wrd = textBox.Text.Split(new char[] { ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries).Count();
             strings.Content = $"Strings: {str}";
             symbols.Content = $"Symbols: {smb}";
-            words.Content = $"words: {wrd}";
+            words.Content = $"Words: {wrd}";
         }
         private void HelpClic(object sender, RoutedEventArgs e)
         {
