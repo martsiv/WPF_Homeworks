@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_H_Containers", "02_H_Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_H_Controls", "03_H_Controls\03_H_Controls.csproj", "{2B0B2EBC-4D4B-4C9B-89FF-2808A63BC299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_H_Notepad", "04_H_Notepad\04_H_Notepad.csproj", "{409603AF-E55D-4618-9B3A-76EE535BD026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_H_Notepad", "04_H_Notepad\04_H_Notepad.csproj", "{409603AF-E55D-4618-9B3A-76EE535BD026}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_H_ColorViewer", "05_H_ColorViewer\05_H_ColorViewer.csproj", "{45ECD8C5-99DF-4C49-ACDE-6BBA6C929EA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{409603AF-E55D-4618-9B3A-76EE535BD026}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{409603AF-E55D-4618-9B3A-76EE535BD026}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{409603AF-E55D-4618-9B3A-76EE535BD026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45ECD8C5-99DF-4C49-ACDE-6BBA6C929EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45ECD8C5-99DF-4C49-ACDE-6BBA6C929EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45ECD8C5-99DF-4C49-ACDE-6BBA6C929EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45ECD8C5-99DF-4C49-ACDE-6BBA6C929EA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
