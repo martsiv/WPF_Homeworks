@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_06._1_L_MVVM"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=local:VievModel}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ColorViewer" Height="450" Width="800" Icon="/free-icon-color-wheel-6001495.png">
     <Window.DataContext>
         <local:VievModel/>
     </Window.DataContext>

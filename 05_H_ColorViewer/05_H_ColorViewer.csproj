@@ -6,10 +6,24 @@
     <RootNamespace>_06._1_L_MVVM</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AssemblyName>ColorViewer</AssemblyName>
+    <ApplicationIcon>free-icon-color-wheel-6001495.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="free-icon-color-wheel-6001495.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="free-icon-color-wheel-6001495.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="free-icon-color-wheel-6001495.png" />
   </ItemGroup>
 
 </Project>
