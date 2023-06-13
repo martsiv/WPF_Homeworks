@@ -15,6 +15,7 @@ namespace _06._1_L_MVVM
     public class VievModel
     {
         public ObservableCollection<Color> colors = new ObservableCollection<Color>();
+        public IEnumerable<Color> MyColors => colors;
         public MyColorRGB Color2 { get; set; }
         private readonly RelayCommand addColor;
         private readonly RelayCommand removeColor;
@@ -31,7 +32,6 @@ namespace _06._1_L_MVVM
                 Color2.Blue = value.Value.B;
             } 
         }
-        public IEnumerable<Color> MyColors => colors;
         public ICommand AddColor => addColor;
         public ICommand RemoveColor => removeColor;
         public VievModel()

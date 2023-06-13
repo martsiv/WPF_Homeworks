@@ -44,6 +44,28 @@
                 MinHeight="30"
                   ItemsSource="{Binding MyColors}"
                   SelectedItem="{Binding SelectedColor, Mode=OneWayToSource}">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}" HorizontalAlignment="Center" Grid.Column="0" Margin="5, 0"></TextBlock>
+                        <Border Grid.Column="1" Grid.Row="0">
+                            <Border.Background>
+                                <SolidColorBrush Color="{Binding}"/>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </StackPanel>
 </Window>
