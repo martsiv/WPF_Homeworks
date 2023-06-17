@@ -7,7 +7,7 @@
         xmlns:mdl="clr-namespace:_06_H_Library.ViewModel"
         d:DataContext="{d:DesignInstance Type=mdl:ViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinHeight="200" MinWidth="550">
+        Title="Library" Height="450" Width="800" MinHeight="200" MinWidth="550" Icon="/Views/education_books_library_icon_149685.png">
     <Window.DataContext>
         <mdl:ViewModel/>
     </Window.DataContext>

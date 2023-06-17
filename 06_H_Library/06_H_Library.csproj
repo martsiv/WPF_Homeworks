@@ -6,10 +6,24 @@
     <RootNamespace>_06_H_Library</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AssemblyName>Library</AssemblyName>
+    <ApplicationIcon>education_books_library_icon_149685.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\education_books_library_icon_149685.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="education_books_library_icon_149685.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\education_books_library_icon_149685.png" />
   </ItemGroup>
 
 </Project>
